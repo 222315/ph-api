@@ -83,42 +83,42 @@ public class VenueDetails {
 
 }
 
-class Address {
-	private String addressLine1;
-	private String addressLine2;
-	private String state;
-	private String pincode;
-
-	public final String getAddressLine1() {
-		return addressLine1;
-	}
-
-	public final void setAddressLine1(String addressLine1) {
-		this.addressLine1 = addressLine1;
-	}
-
-	public final String getAddressLine2() {
-		return addressLine2;
-	}
-
-	public final void setAddressLine2(String addressLine2) {
-		this.addressLine2 = addressLine2;
-	}
-
-	public final String getState() {
-		return state;
-	}
-
-	public final void setState(String state) {
-		this.state = state;
-	}
-
-	public final String getPincode() {
-		return pincode;
-	}
-
-	public final void setPincode(String pincode) {
-		this.pincode = pincode;
-	}
-
-}
+//class Address {
+//	private String addressLine1;
+//	private String addressLine2;
+//	private String state;
+//	private String pincode;
+//
+//	public final String getAddressLine1() {
+//		return addressLine1;
+//	}
+//
+//	public final void setAddressLine1(String addressLine1) {
+//		this.addressLine1 = addressLine1;
+//	}
+//
+//	public final String getAddressLine2() {
+//		return addressLine2;
+//	}
+//
+//	public final void setAddressLine2(String addressLine2) {
+//		this.addressLine2 = addressLine2;
+//	}
+//
+//	public final String getState() {
+//		return state;
+//	}
+//
+//	public final void setState(String state) {
+//		this.state = state;
+//	}
+//
+//	public final String getPincode() {
+//		return pincode;
+//	}
+//
+//	public final void setPincode(String pincode) {
+//		this.pincode = pincode;
+//	}
+//
+//}
