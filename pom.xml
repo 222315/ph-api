@@ -80,7 +80,7 @@
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.4.11</version>
-				<executions>
+				 <executions>
 					<execution>
 						<phase>package</phase>
 						<goals>
