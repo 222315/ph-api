@@ -3,13 +3,13 @@
 	API project for PartyHulchul micro services.
 	Developed using Spring boot.
 
-# Prerequisites
+## Prerequisites
 	JDK 1.8 or later
 	Mongo DB
 	Docker
 	Maven
 
-# Installing steps
+## Installing steps
 + Clone the repository.
 + Run mvn clean install to load all the required components/plug-ins. Required first time.
 + Run spring-boot:run (if docker is not installed in local system)
