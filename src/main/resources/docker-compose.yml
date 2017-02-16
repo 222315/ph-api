@@ -1,0 +1,41 @@
+version: '1'
+services:
+ web:
+    image: dockercloud/ph-ui
+    ports:
+      - 8080
+    networks:
+      - front-tier
+      - back-tier
+  services:
+    image: dockercloud/partyhulchul/ph-services-api
+    ports:
+      - 8080
+    networks:
+      - front-tier
+      - back-tier
+
+  mongo:
+    image: mongo
+    links:
+      - db
+    networks:
+      - back-tier
+
+  lb:
+    image: dockercloud/haproxy
+    ports:
+      - 80:80
+    links:
+      - web
+    networks:
+      - front-tier
+      - back-tier
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock 
+
+networks:
+  front-tier:
+    driver: bridge
+  back-tier:
+    driver: bridge
