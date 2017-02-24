@@ -1,0 +1,48 @@
+<h1>Vendor Dashboard</h1>
+<br />
+
+<!-- Added navbar to switch between list view shown in video and new edit view -->
+<div class="navbar">
+    <ul class="nav navbar-nav">
+        <li class="toolbar-item">
+            <a (click)="editViewEnabled=false" [class.active]="!editViewEnabled">
+                <span class="glyphicon glyphicon-align-justify"></span> List View
+            </a>
+        </li>
+        <li class="toolbar-item">
+            <a (click)="editViewEnabled=true" [class.active]="editViewEnabled">
+                <span class="glyphicon glyphicon-pencil"></span> Edit View
+            </a>
+        </li>
+    </ul>
+</div>
+
+<ul [hidden]="editViewEnabled">
+    <li *ngFor="let vendor of vendors">
+        {{ vendor.firstName  }} {{ vendor.lastName }}
+    </li>
+</ul>
+
+<!-- Added editable list for doing an HTTP PUT -->
+<div [hidden]="!editViewEnabled">
+    <div class="container" *ngFor="let vendor of vendors">
+        <div class="row" [hidden]="editId===vendor.id">
+            <div class="col-md-4">
+            {{ vendor.firstName  }} {{ vendor.lastName }}
+            </div>
+            <div class="col-md-8">
+                <span class="btn btn-success pull-left" 
+                    (click)="editId=vendor.id">Edit</span>
+            </div>
+        </div>
+        <div [hidden]="editId!==vendor.id">
+            First: <input [(ngModel)]="vendor.firstName" />&nbsp;
+            Last: <input [(ngModel)]="vendor.lastName" />
+            <span class="btn btn-success" (click)="save(vendor)">Save</span>&nbsp;
+            <span class="btn btn-default" (click)="editId=0">Cancel</span>
+        </div>
+        <br />
+    </div>
+
+    <span class="alert alert-danger" [hidden]="!errorMessage">{{ errorMessage }}</span>
+</div>
