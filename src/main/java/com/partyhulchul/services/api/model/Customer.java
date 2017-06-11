@@ -8,6 +8,15 @@ public class Customer {
 	
 	@Id
 	private String id;
+	
+	@JsonIgnore
+	private String firstName;
+	private String lastName;
+	private String emailId;
+	private Phone phone;
+	private Address mailingAddress ;
+	private Address billingAddress ;
+	
 	public String getId() {
 		return id;
 	}
@@ -50,12 +59,11 @@ public class Customer {
 	public void setBillingAddress(Address billingAddress) {
 		this.billingAddress = billingAddress;
 	}
-	 @JsonIgnore
-	private String firstName;
-	private String lastName;
-	private String emailId;
-	private Phone phone;
-	private Address mailingAddress ;
-	private Address billingAddress ;
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId
+				+ ", phone=" + phone + ", mailingAddress=" + mailingAddress + ", billingAddress=" + billingAddress
+				+ "]";
+	}
 
 }

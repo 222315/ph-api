@@ -3,6 +3,12 @@ package com.partyhulchul.services.api.model;
 public class Address {
 	
 	private String addressLine1;
+	private String addressLine2 ;
+	private String addressLine3 ;
+	private String city;
+	private String zip;
+	private String country ;
+
 	public String getAddressLine1() {
 		return addressLine1;
 	}
@@ -39,10 +45,4 @@ public class Address {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	private String addressLine2 ;
-	private String addressLine3 ;
-	private String city;
-	private String zip;
-	private String country ;
-
 }
